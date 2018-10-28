@@ -1,8 +1,8 @@
-const RequestHelper = function (url) {
+const Request = function (url) {
   this.url = url
 }
 
-RequestHelper.prototype.get = function (onComplete) {
+Request.prototype.get = function (onComplete) {
   const xhr = new XMLHttpRequest();
   xhr.open('GET', this.url);
   xhr.addEventListener('load', function() {
@@ -15,4 +15,4 @@ RequestHelper.prototype.get = function (onComplete) {
   xhr.send();
 };
 
-module.exports = RequestHelper;
+module.exports = Request;
