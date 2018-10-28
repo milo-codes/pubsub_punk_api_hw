@@ -1,6 +1,5 @@
 const BeersListView = require("./views/beer_list_view.js");
-
-const Beer = require("./models/beer.js");
+const Beers = require("./models/beer.js");
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("JS Loaded");
@@ -9,6 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const beersListView = new BeersListView(beersListContainer);
   beersListView.bindEvents();
 
-  // const beers = new Beers();
-  // beerList.getData();
+  const beers = new Beers();
+  beers.getData();
 });
