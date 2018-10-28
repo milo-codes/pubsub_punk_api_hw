@@ -12,17 +12,8 @@ BeerView.prototype.render = function () {
   // image
   this.addImage(beerContainer);
 
-  // name
-  this.addName(beerContainer);
-
-  // tagline
-  this.addTagline(beerContainer);
-
-  // // description
-  // this.addDescription(beerContainer);
-  //
-  // // food-pairing
-  // this.addFoodPairing(beerContainer);
+  // text
+  this.addTextContent(beerContainer);
 };
 
 BeerView.prototype.addImage = function (container) {
@@ -30,6 +21,20 @@ BeerView.prototype.addImage = function (container) {
   beerImage.classList.add("beer-image");
   beerImage.src = `${ this.beer.image_url }`;
   container.appendChild(beerImage);
+};
+
+BeerView.prototype.addTextContent = function (container) {
+  // name
+  this.addName(container);
+
+  // tagline
+  this.addTagline(container);
+
+  // description
+  this.addDescription(container);
+
+  // food-pairing
+  this.addFoodPairing(container);
 };
 
 BeerView.prototype.addName = function (container) {
@@ -44,6 +49,21 @@ BeerView.prototype.addTagline = function (container) {
   tag.classList.add("beer-tag");
   tag.textContent = `${ this.beer.tagline }`;
   container.appendChild(tag);
+};
+
+BeerView.prototype.addDescription = function (container) {
+  const blurb = document.createElement("p");
+  blurb.classList.add("beer-blurb");
+  blurb.textContent = `${ this.beer.description }`;
+  container.appendChild(blurb);
+};
+
+// TODO list pairings from array better
+BeerView.prototype.addFoodPairing = function (container) {
+  const pairing = document.createElement("p");
+  pairing.classList.add("beer-pair");
+  pairing.textContent = `Goes well with: ${ this.beer.food_pairing }`;
+  container.appendChild(pairing);
 };
 
 module.exports = BeerView;

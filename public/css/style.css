@@ -1,0 +1,49 @@
+html {
+  height: 100vh;
+  background-image: url("../images/beer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body {
+  height: 100%;
+
+}
+
+img#logo {
+  height: 12em;
+  float: left;
+  margin: 3em;
+  border-radius: 30% 70% 50% 50% / 0% 50% 50% 100%;
+}
+
+div#beer-list-container {
+  width: 47%;
+  margin-left: auto;
+}
+
+div.beer-container {
+  padding: 1em;
+  margin: 1em;
+  border: 2px solid papayawhip;
+
+}
+
+img.beer-image {
+  max-width: 10em;
+  max-height: 10em;
+  float: right;
+}
+
+h3.beer-name {
+}
+
+p.beer-tag {
+}
+
+p.beer-pair {
+}
+
+p.beer-blurb {
+}
